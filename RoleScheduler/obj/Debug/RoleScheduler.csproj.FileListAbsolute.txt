@@ -1,10 +1,6 @@
 c:\users\mrgrey\documents\visual studio 2015\Projects\RoleScheduler\RoleScheduler\bin\Debug\RoleScheduler.exe.config
 c:\users\mrgrey\documents\visual studio 2015\Projects\RoleScheduler\RoleScheduler\bin\Debug\RoleScheduler.exe
 c:\users\mrgrey\documents\visual studio 2015\Projects\RoleScheduler\RoleScheduler\bin\Debug\RoleScheduler.pdb
-c:\users\mrgrey\documents\visual studio 2015\Projects\RoleScheduler\RoleScheduler\bin\Debug\EntityFramework.dll
-c:\users\mrgrey\documents\visual studio 2015\Projects\RoleScheduler\RoleScheduler\bin\Debug\EntityFramework.SqlServer.dll
-c:\users\mrgrey\documents\visual studio 2015\Projects\RoleScheduler\RoleScheduler\bin\Debug\EntityFramework.xml
-c:\users\mrgrey\documents\visual studio 2015\Projects\RoleScheduler\RoleScheduler\bin\Debug\EntityFramework.SqlServer.xml
 c:\users\mrgrey\documents\visual studio 2015\Projects\RoleScheduler\RoleScheduler\obj\Debug\RoleScheduler.csprojResolveAssemblyReference.cache
 c:\users\mrgrey\documents\visual studio 2015\Projects\RoleScheduler\RoleScheduler\obj\Debug\RoleScheduler.exe
 c:\users\mrgrey\documents\visual studio 2015\Projects\RoleScheduler\RoleScheduler\obj\Debug\RoleScheduler.pdb

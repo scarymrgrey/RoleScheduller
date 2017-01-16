@@ -13,14 +13,21 @@ namespace RoleScheduler
     {
         static void Main(string[] args)
         {
-            RunRequestProcessing();
+            RunFirstRequestProcessing();
+
+            RunSecondRequestProcessing();
         }
 
-        static void RunRequestProcessing()
+        static void RunFirstRequestProcessing()
         {
+            //first web request
             CurrentUser.User = new AdminAttribute();
             new AddUserFromAdminCommand().Execute(); // Everything OK!
+        }
 
+        static void RunSecondRequestProcessing()
+        {
+            //second web request
             CurrentUser.User = new CommonUserAttribute();
             new TryAddUserFromUserCommand().Execute(); // Exception!
         }
