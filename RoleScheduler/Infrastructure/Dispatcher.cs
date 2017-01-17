@@ -9,21 +9,21 @@ namespace RoleScheduler.Infrastructure
     using System.Reflection;
     using RoleScheduler.CQRS.Queries;
 
-    public class Scheduler
+    public class Dispatcher
     {
         readonly Attribute _currentUser;
-        public Scheduler()
+        public Dispatcher()
         {
             _currentUser = CurrentUser.User;
         }
 
-        public void AddToQueue(Command command)
+        public void Push(Command command)
         {
 
-            var doesUserHavePermission = new CheckOperationLegalityQuery() { Command = command, RequestedUser = _currentUser }.Execute();
+            var doesUserHavePermission = new CheckOperationLegalityQuery() {Command = command,RequestedUser = _currentUser}.Execute();
             if (doesUserHavePermission)
             {
-                Console.WriteLine(string.Format("Command {0} successfully added to queue",command.GetType().Name));
+                Console.WriteLine(string.Format("Command {0} successfully pushed",command.GetType().Name));
             }
             else
             {

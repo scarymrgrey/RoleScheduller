@@ -7,14 +7,17 @@ using System.Threading.Tasks;
 namespace RoleScheduler
 {
     using RoleScheduler.Attributes;
+    using RoleScheduler.CQRS.Queries;
     using RoleScheduler.Infrastructure;
 
-    [Admin]
-    class AddUserFromAdminCommand :Command
+    [CommonUser]
+    class SelfDeleteByUserCommand : Command
     {
         public override void Execute()
         {
-            new Scheduler().AddToQueue(new AddUserCommand());
+            var currentUser = new GetCurrentUserQuery().Execute();
+            new Dispatcher().Push(new DeleteUserCommand() {User = currentUser});
+
         }
     }
 }

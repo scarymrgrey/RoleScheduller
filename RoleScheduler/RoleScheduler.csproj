@@ -45,12 +45,20 @@
   <ItemGroup>
     <Compile Include="Attributes\AdminAttribute.cs" />
     <Compile Include="Attributes\CommonUserAttribute.cs" />
-    <Compile Include="Commands\AddUserCommand.cs" />
-    <Compile Include="Commands\TryAddUserFromUserCommand.cs" />
-    <Compile Include="Commands\AddUserFromAdminCommand.cs" />
+    <Compile Include="CQRS\Commands\Add\AddEmailComand.cs" />
+    <Compile Include="CQRS\Commands\Add\AddUserCommand.cs" />
+    <Compile Include="CQRS\Commands\Add\TryAddUserFromUserCommand.cs" />
+    <Compile Include="CQRS\Commands\Add\AddUserFromAdminCommand.cs" />
+    <Compile Include="CQRS\Commands\Delete\DeleteUserCommand.cs" />
+    <Compile Include="CQRS\Commands\Delete\SelfDeleteByUserCommand.cs" />
+    <Compile Include="CQRS\Commands\Delete\GroupDeleteByAdminCommand.cs" />
+    <Compile Include="CQRS\Queries\CurrentUser\GetCurrentUserQuery.cs" />
+    <Compile Include="CQRS\Queries\Security\CheckOperationLegalityQuery.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\ScheduleTask.cs" />
     <Compile Include="Infrastructure\Command.cs" />
     <Compile Include="Infrastructure\CurrentUser.cs" />
+    <Compile Include="Infrastructure\Dispatcher.cs" />
     <Compile Include="Infrastructure\Scheduler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 namespace RoleScheduler
 {
     using RoleScheduler.Attributes;
+    using RoleScheduler.Infrastructure;
 
     [Admin]
-    class AddUserCommand : Command
+    class AddUserFromAdminCommand :Command
     {
         public override void Execute()
         {
-            // 1) create new user
-            // 2) send email
+            new Scheduler().AddToQueue(new AddUserCommand());
+            new Scheduler().AddToQueue(new SendEmailComand());
         }
     }
 }
